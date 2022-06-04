@@ -38,7 +38,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: npm install
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+          start: npm start
